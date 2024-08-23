@@ -1,44 +1,28 @@
-" 矢印キーでなら行内を動けるように
+" Enable movement within a line with arrow keys
 nnoremap <Down> gj
 nnoremap <Up>   gk
 
-" showbreaks
+" Show breaks in long lines
 set showbreak=↪
 
-" 日本語入力がオンのままでも使えるコマンド(Enterキーは必要)
-nnoremap あ a
-nnoremap い i
-nnoremap う u
-nnoremap お o
-nnoremap っd dd
-nnoremap っy yy
-" ""の中身を変更する
-nnoremap し” ci"
-" ''の中身を変更する
-nnoremap し’ ci'
-" jjでエスケープ
+" Escape insert mode with 'jj'
 inoremap <silent> jj <ESC>
-" jkで保存してエスケープ
+" Save and escape with 'jk'
 inoremap <silent> jk <ESC>:w<CR>
 
-" 日本語入力で”っj”と入力してもEnterキーで確定させればインサートモードを抜ける
-inoremap <silent> っj <ESC>
-
-
-" 入力中のコマンドをステータスに表示する
+" Display the command being typed in the status line
 set showcmd
 
-
-" 検索系
-" 検索文字列が小文字の場合は大文字小文字を区別なく検索する
+" Search settings
+" Ignore case when searching if the search string is lowercase
 set ignorecase
-" 検索文字列に大文字が含まれている場合は区別して検索する
+" Respect case when searching if the search string contains uppercase letters
 set smartcase
-" 検索文字列入力時に順次対象文字列にヒットさせる
+" Incremental search - highlight matches as you type
 set incsearch
-" 検索時に最後まで行ったら最初に戻る
+" Wrap around the search when reaching the end of the file
 set wrapscan
-" 検索語をハイライト表示
+" Highlight search matches
 set hlsearch
-" ESC連打でハイライト解除
+" Cancel search highlighting with double ESC
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
