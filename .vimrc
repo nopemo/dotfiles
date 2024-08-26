@@ -3,12 +3,12 @@ nnoremap <Down> gj
 nnoremap <Up>   gk
 
 " Show breaks in long lines
-set showbreak=↪
+"set showbreak=↪
 
 " Escape insert mode with 'jj'
-inoremap <silent> jj <ESC>
+inoremap jj <ESC>
 " Save and escape with 'jk'
-inoremap <silent> jk <ESC>:w<CR>
+inoremap jk <ESC>:w<CR>
 
 " Display the command being typed in the status line
 set showcmd
