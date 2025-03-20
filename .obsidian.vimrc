@@ -27,6 +27,3 @@ imap <silent> っj <ESC>
 
 " 入力中のコマンドをステータスに表示する
 set showcmd
-
-" ESC連打で検索ハイライト解除（Obsidianでは `hlsearch` は使えないため、`nohlsearch` も削除）
-nmap <Esc><Esc>
